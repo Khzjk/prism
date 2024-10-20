@@ -15,7 +15,7 @@ const AuthBg = ({ children }: Props) => {
         <StatusBar backgroundColor="#76CFF1" style="dark" />
         <Center height="20" mb="16">
           <Heading color="white" fontSize="4xl" fontWeight="semibold">
-            AutismCare
+            Prism
           </Heading>
         </Center>
         <Stack bg="coolGray.700" flex="1" roundedTop="3xl" style={styles.shadow}>

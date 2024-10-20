@@ -13,6 +13,7 @@ import * as Notifications from "expo-notifications";
 import { useAppDispatch, useAppSelector } from "../store";
 import { removeNoti } from "../store/notification.reducer";
 import PlayMusic from "../screens/main/PlayMusic";
+import DocumentStack from "./DocumentStack";
 
 const Tab = createBottomTabNavigator<BottomTabsParams>();
 
@@ -28,7 +29,7 @@ Notifications.setNotificationHandler({
 
 const TabNav = () => {
   const { colors } = useTheme();
-  const { isNoti } = useAppSelector((state) => state.noti);
+  const { isNoti } = useAppSelector((state: any) => state.noti);
 
   const dispatch = useAppDispatch();
   function scheduleNotificationHandler() {
@@ -51,7 +52,7 @@ const TabNav = () => {
       // Do something when recieved
     });
 
-    const subcribe2 = Notifications.addNotificationResponseReceivedListener((response) => {
+    const subcribe2 = Notifications.addNotificationResponseReceivedListener((response: any) => {
       // Do something when interact
     });
 
@@ -110,17 +111,17 @@ const TabNav = () => {
         }}
       />
       <Tab.Screen
-        name="PlayMusic"
-        component={PlayMusic}
+        name="DocumentStack"
+        component={DocumentStack}
         options={{
-          headerShown: true,
-          title: "Heart Beat",
+          headerShown: false,
+          title: "Documents",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="musical-notes-outline" color={color} size={size} />
+            <Ionicons name="document-outline" color={color} size={size} />
           ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Notification"
         component={Notification}
         options={{
@@ -133,7 +134,7 @@ const TabNav = () => {
             <Ionicons name="notifications-outline" color={color} size={size} />
           ),
         }}
-      />
+      /> */}
       <Tab.Screen
         name="Setting"
         component={Setting}

@@ -6,7 +6,7 @@ export type BottomTabsParams = {
   MeetingStack: undefined;
   Setting: undefined;
   Notification: undefined;
-  PlayMusic: undefined;
+  DocumentStack: undefined;
   HistoryStack: undefined;
 };
 
@@ -42,6 +42,11 @@ export type MeetingStackParams = {
 export type HistoryStackParams = {
   History: undefined;
   PostDetail: { post: IPost };
+};
+
+export type DocumentStackParams = {
+  Document: undefined;
+  PDFViewer: { url: string };
 };
 
 export type RootStackParams = {

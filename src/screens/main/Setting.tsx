@@ -1,4 +1,4 @@
-import { Alert, StyleSheet } from "react-native";
+import { Alert, Linking, StyleSheet } from "react-native";
 import React, { useState } from "react";
 import { Avatar, Button, Center, Column, Heading, Icon, IconButton } from "native-base";
 import { useAppDispatch, useAppSelector } from "../../store";
@@ -64,6 +64,18 @@ const Setting = ({ navigation }: Props) => {
         <LoadingOverlay />
       </Column>
     );
+    const handleEmailPress = () => {
+      Linking.openURL("mailto:hotlinengaymai@gmail.com");
+    };
+  
+    const handlePhonePress = () => {
+      Linking.openURL("tel:0963061414");
+    };
+  
+    const handleMapPress = () => {
+      // Replace with the actual map URL or coordinate
+      Linking.openURL("https://www.google.com/maps/place/Hà+Nội,+Việt+Nam");
+    };
   return (
     <>
       <Column flex="1" bg="coolGray.700" px="5">
@@ -112,6 +124,24 @@ const Setting = ({ navigation }: Props) => {
             onPress={() => navigation.navigate("ResponseForUs")}
           >
             Trợ giúp & phản hồi
+          </SettingButton>
+          <SettingButton
+            leftIconName="mail-outline"
+            onPress={handleEmailPress}
+          >
+            Email: hotlinengaymai@gmail.com
+          </SettingButton>
+          <SettingButton
+            leftIconName="call-outline"
+            onPress={handlePhonePress}
+          >
+            Hotline: 096 306 1414
+          </SettingButton>
+          <SettingButton
+            leftIconName="location-outline"
+            onPress={handleMapPress}
+          >
+            Địa chỉ: Hà Nội, Việt Nam
           </SettingButton>
         </Column>
         <Button
