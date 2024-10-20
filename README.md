@@ -27,7 +27,7 @@ Prism is available for both iOS and Android devices.
 * [React Navigation](https://reactnavigation.org/) Routing and Navigation
 * [Firebase:](https://firebase.google.com/) A cloud service provided by Google that supports storing application data and media.
 
-## [Installation](https://drive.google.com/file/d/1LN9OI8SmR7AHRvVdMBJo39ExnKJww66F/view?usp=sharing)
+## [Installation](https://drive.google.com/file/d/1LN9OI8SmR7AHRvVdMBJo39ExnKJww66F/view?usp=sharing) 
 
 # Demo
 [![Xem video](./assets/screens/image.png)(./)](https://firebasestorage.googleapis.com/v0/b/food-donation-98ef2.appspot.com/o/prism.mp4?alt=media&token=3fd21c26-e8d4-410e-928a-6c41092f3b1)
